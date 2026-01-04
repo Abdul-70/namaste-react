@@ -1,5 +1,6 @@
 import {CDN_LOGO} from "../utils/constants.js"
 import { useState } from "react";
+import logo from "../utils/images/numfood.png";
 
 
 

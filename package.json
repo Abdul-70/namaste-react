@@ -4,7 +4,7 @@
   "description": "This is my first react app ",
   "scripts": {
     "start": "parcel index.html",
-    "build" : "parcel build index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -22,12 +22,10 @@
   },
   "dependencies": {
     "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "react-dom": "^19.2.3",
+    "react-router-dom": "^6.14.2"
   },
-  
-    "browserslist":
-    [
-      "last 2 versions"
-    ]
-  
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
