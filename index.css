@@ -16,7 +16,14 @@
     list-style-type: none;
     padding: 24px;
     font-size: 18px;
+    text-decoration: none;
 }
+.nav-items > ul > li > a{
+    
+    text-decoration: none;
+    color: black;
+}
+
 
 .res-card{
     
