@@ -1,28 +1,37 @@
 import React from "react";
-class UserClass extends React.Component{
+class UserClass extends React.Component {
+  constructor(props) {
+    super(props);
 
-    constructor(props){
-        super(props);
+    this.state = {
+      userInfo: {
+        name: "dummy",
+        location: "default",
+      },
+    };
+  }
 
-        // this.state({
-        //     // name: "dummy", location : "default"
-        // })
-    }
+  async componentDidMount() {
+    const data = await fetch("https://api.github.com/users/abdul-70");
 
-    // componentDidMount(){
+    const json = await data.json();
 
-    // }
+    this.setState({
+      userInfo: json,
+    });
+  }
 
-    render(){
-        const {name, location, description}=this.props;
-        return(
-             <div style={{ border: "1px solid black", padding:"5px"}}>
-            <h1>{name}</h1>
-            <h3>{location}</h3>
-            <h4>{description}</h4>
-        </div>
-        )
-    }
+  render() {
+    const { userInfo } = this.state;
+    return (
+      <div style={{ border: "1px solid black", padding: "5px" }}>
+        <img src={userInfo.avatar_url} style={{ width: "150px" }} alt="" />
+        <h1>{userInfo.name}</h1>
+        <h3>{userInfo.location}</h3>
+        <h4>{userInfo.bio}</h4>
+      </div>
+    );
+  }
 }
 
 export default UserClass;

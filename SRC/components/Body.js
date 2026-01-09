@@ -30,7 +30,7 @@ const Body = () => {
     );
   };
 
-  return RetaurentList.length === 0 ? (
+  return RetaurentList.length == 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
